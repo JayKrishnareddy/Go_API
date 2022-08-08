@@ -25,9 +25,12 @@ var employees = []Employee{
 	},
 }
 
+// Fetch all Employes
 func getEmployees(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, employees)
 }
+
+// Create Employee
 
 func main() {
 	router := gin.Default()
