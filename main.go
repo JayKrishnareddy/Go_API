@@ -1,5 +1,11 @@
 package main
 
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
 type Employee struct {
 	EmployeeId   string `json:"employeeid"`
 	EmployeeName string `json:"employeename"`
@@ -19,4 +25,12 @@ var employees = []Employee{
 	},
 }
 
-func getEmployees()
+func getEmployees(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, employees)
+}
+
+func main() {
+	router := gin.Default()
+	router.GET("/employees", getEmployees)
+	router.Run("localhost:8080")
+}
