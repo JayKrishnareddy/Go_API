@@ -32,8 +32,16 @@ func getEmployees(c *gin.Context) {
 
 // Create Employee
 
+func createEmployee(c *gin.Context) {
+	var newEmployee Employee
+	if err := c.BindJSON(&newEmployee); err != nil {
+		return
+	}
+}
+
 func main() {
 	router := gin.Default()
 	router.GET("/employees", getEmployees)
+	router.POST("/employees", createEmployee)
 	router.Run("localhost:8080")
 }
