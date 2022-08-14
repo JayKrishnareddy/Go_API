@@ -30,7 +30,7 @@ func getEmployees(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, employees)
 }
 
-// Create Employee with Data
+// Create Employee with Data and analysis function
 
 func createEmployee(c *gin.Context) {
 	var newEmployee Employee
