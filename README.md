@@ -1,1 +1,1 @@
-## Create Rest Api With Gin Framework & Golang
+## Create REST API With Gin Framework & Golang
