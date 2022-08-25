@@ -25,7 +25,7 @@ var employees = []Employee{
 	},
 }
 
-// Fetch all Employes
+// Fetch all Employes Data
 func getEmployees(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, employees)
 }
